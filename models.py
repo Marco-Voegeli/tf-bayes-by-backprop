@@ -24,10 +24,10 @@ class BayesianNetwork(Model):
 
     @property
     def log_prior_loss(self) -> tf.Tensor:
-        """Total log prior loss p(w) summed up over
-        all initialized VariationalDense layers
+        """Total prior log loss log p(w) summed up
+        over all initialized VariationalDense layers
 
-        :return: total log prior loss p(w)
+        :return: total log prior log loss (log p(w))
         """
         return (self.dense_1.log_prior +
                 self.dense_2.log_prior +
@@ -38,7 +38,7 @@ class BayesianNetwork(Model):
         """Total variational posterior loss q(w|θ) summed
         up over all initialized VariationalDense layers
 
-        :return: total variational posterior loss q(w|θ)
+        :return: total variational posterior log loss (log q(w|θ))
         """
         return (self.dense_1.log_variational_posterior +
                 self.dense_2.log_variational_posterior +
