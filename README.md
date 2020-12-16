@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains a basic implementation of the "Weight uncertainty in neural networks" paper for approximate variational inference by Blundell et al. using TensorFlow. In order to show the possibilities of the network the code is accompanied by an python notebook with a simple regression problem.
+This repository contains a basic implementation of the "Weight uncertainty in neural networks" paper for approximate variational inference by Blundell et al. using TensorFlow. In order to show the possibilities of the network, the code is accompanied by a python notebook with a simple regression problem.
 
 ![img](uncertainty.png)
 
