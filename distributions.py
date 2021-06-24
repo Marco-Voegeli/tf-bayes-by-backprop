@@ -21,7 +21,7 @@ class DistributionBase:
         pass
 
     @abstractmethod
-    def sample(self, output_shape: tf.TensorShape) -> tf.Tensor:
+    def sample(self) -> tf.Tensor:
         pass
 
 
@@ -111,5 +111,5 @@ class GaussScaleMixturePrior(DistributionBase):
         return tf.reduce_sum(mixture)
 
     @overrides
-    def sample(self, output_shape: tf.TensorShape) -> tf.Tensor:
+    def sample(self) -> tf.Tensor:
         raise NotImplementedError()
